@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 
 type ConnectionObject={
     isConnected?:number
+    // ?matlab hogi yaa nahi hogi
 }
 
 const connection: ConnectionObject = {}
@@ -21,7 +22,7 @@ async function dbConnect():Promise<void>{
     }
     catch(error){
         console.log("Database connection failes!",error);
-        
+        // Database is not connected than we exit 
         process.exit(1)
     }
 }

@@ -1,5 +1,7 @@
 import mongoose,{Schema,Document} from "mongoose";
 
+// interface define type
+// database me bhi yahi jayega
 export interface Message extends Document {
     content:string;
     createdAt:Date

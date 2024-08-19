@@ -1,5 +1,7 @@
 import {z} from 'zod'
 
+// schema matlab total verification of the data that has come from the user
+
 export const usernameValidation=z
 .string()
 .min(2,"Username must be atleast 2 character")
