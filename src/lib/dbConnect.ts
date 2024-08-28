@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 
+
 type ConnectionObject = {
   isConnected?: number;
 };
@@ -13,6 +14,10 @@ async function dbConnect(): Promise<void> {
     return;
   }
 
+
+console.log("The string is",process.env.MONGODB_URI);
+
+
   try {
     // Attempt to connect to the database
     const db = await mongoose.connect(process.env.MONGODB_URI || '', {});
@@ -21,7 +26,7 @@ async function dbConnect(): Promise<void> {
 
     console.log('Database connected successfully');
   } catch (error) {
-    console.error('Database connection failed:');
+    console.error('Database connection failed:',error);
 
     // Graceful exit in case of a connection error
     process.exit(1);
