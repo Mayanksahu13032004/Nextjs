@@ -6,7 +6,7 @@ export interface Message extends Document {
     content:string;
     createdAt:Date
 }
-
+// string s in capital letter
 const MessageSchema:Schema<Message>=new Schema({
 content:{
     type:String,

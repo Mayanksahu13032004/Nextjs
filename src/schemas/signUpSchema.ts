@@ -8,7 +8,8 @@ export const usernameValidation=z
 .max(20,"Username must be  no more than  20 character")
 .regex(/^[a-zA-Z0-9_]+$/,"Username must not contain special character")
 
-
+// object matlab total sign up schema
+// string refers to the individual 
 export const signUpSchema=z.object({
     username:usernameValidation,
     
